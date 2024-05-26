@@ -20,6 +20,7 @@ from .views import *
 import emp.views as fun
 import accounts.views as acc
 import emp_display.views as emp_display
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -31,3 +32,4 @@ urlpatterns = [
     path("accounts/", include('django.contrib.auth.urls')),
     path("accounts/",include('accounts.urls')),
 ]
+urlpatterns += staticfiles_urlpatterns()
